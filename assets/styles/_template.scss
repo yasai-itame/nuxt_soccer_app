@@ -1,0 +1,58 @@
+@import "~/assets/styles/_mixin.scss";
+.t-contents {
+  width: 100%;
+  display: flex;
+  //flex-wrap: wrap;
+  flex-direction: row-reverse;
+  background: #4F4F4F;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+  &:after {
+    content: "";
+    display: block;
+    background: url("~/assets/img/img_soccer-ball.png") no-repeat center center / contain;
+    width: 524px;
+    height: 537px;
+    position: absolute;
+    right: -70px;
+    bottom: -160px;
+    z-index: -1;
+  }
+  &__box {
+    width: calc(100% - 240px);
+    transition: width .5s;
+    min-height: 100vh;
+    @include sp {
+      width: 100%;
+    }
+  }
+  &__header {
+    padding: 40px 32px;
+    @include sp {
+      padding: 40px 20px;
+    }
+  }
+  &__button-wrapper {
+    display: flex;
+  }
+  &__1column {
+    padding: 0 10px 40px;
+    max-width: 832px;
+    margin: 0 auto;
+    @include sp {
+      padding: 0 20px 20px;
+    }
+  }
+  &__3column {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 10px 40px;
+    max-width: 832px;
+    margin: 0 auto;
+    @include sp {
+      padding: 0 20px 20px;
+    }
+  }
+}
